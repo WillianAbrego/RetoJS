@@ -26,35 +26,10 @@ __#__
 Ten en cuenta que el árbol es un string y necesitas los saltos de línea \n 
 para cada línea para que se forme bien el árbol.*/
 
-// let cuentaAtras = (numero) => {
-//   // base case
-//   if (numero === 0) {
-//     return console.log("#");
-//   }
-//   //   console.log("1".repeat(numero) + "*".repeat(numero) + "2".repeat(numero));
-//   console.log(
-//     "1".repeat(numero * 2 - 1) +
-//       "*".repeat(numero * 2 - 1) +
-//       "2".repeat(numero * 2 - 1)
-//   );
-//   //console.log(typeof numero);
-//   return cuentaAtras(numero - 1);
-// };
-// cuentaAtras(3);
-
-// let repetir = 0;
-// for (let x = 5; x >= repetir; x--) {
-//   console.log("2".repeat(x));
-// }
-
-// for (let i = 1; i <= 4; i++) {
-//   for (let j = 1; j < i * 2; j++) {
-//     console.log("2".repeat(j));
-//   }
-// }
-
 const creandoLineas = (altura) => {
-  let ancho = "x".repeat(altura * 2 - 1);
+  if (altura >= 100) {
+    return console.log("no se puede");
+  }
   for (let x = 1; x <= altura; x++) {
     let arbol =
       "_".repeat(altura - x) +
@@ -64,10 +39,13 @@ const creandoLineas = (altura) => {
 
     console.log(arbol);
   }
-  //   for (let y = 1; y <= 2; y++) {
-  //     let tronco = "_".repeat(altura + 2);
-  //     console.log(tronco + "\n");
-  //   }
+  for (let y = 1; y <= 2; y++) {
+    let tronco =
+      "_".repeat(altura - 1) +
+      "#".repeat(1) +
+      "_".repeat(altura - 1) +
+      " ".repeat(y);
+    console.log(tronco);
+  }
 };
-creandoLineas(5);
-//(3*2)-1
+creandoLineas(10);
