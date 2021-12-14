@@ -37,6 +37,6 @@ console.log(date3.getMonth());
 
 const daysToXmas = (date) => {
   const navidad = new Date("Dec 25, 2021");
-  console.log(Math.trunc((navidad - date) / 8.64e7));
+  return Math.trunc((navidad - date) / 8.64e7);
 };
 daysToXmas(date2);
