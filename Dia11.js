@@ -29,7 +29,6 @@ diga el precio con descuento acumulado para la tarjeta fidelidad. 😜 */
 const shouldBuyFidelity = (entrada) => {
   let tarjeta = 0.75;
   let boleto = 12;
-  let constante = 250;
   let suma = 0;
   for (let i = 1; i <= entrada; i++) {
     let num = 12 * Math.pow(tarjeta, i);
@@ -45,3 +44,4 @@ const shouldBuyFidelity = (entrada) => {
   }
 };
 shouldBuyFidelity(1);
+shouldBuyFidelity(100);
